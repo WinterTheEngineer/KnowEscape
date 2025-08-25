@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <!-- CDNs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 
     <!-- imports -->
     <link rel="icon" type="image/x-icon" href="{% static 'knowescape/brand/favicon.png' %}">
@@ -34,7 +34,7 @@
     
     <link rel="stylesheet" href="{% static 'knowescape/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}"> -->
     <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
 
     <title>KnowEscape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
@@ -43,7 +43,7 @@
     <div class="overlay"></div>
     <header id="header">
         <div class="glow"></div>
-        <div class="container-fluid header-container">
+        <div class="container">
             <nav>
                 <a href="/" class="nav-brand">
                     <img src="{% static 'knowescape/brand/text logo - slim.png' %}">
@@ -74,82 +74,33 @@
                     </li>
                 </ul>
                 <div class="nav-actions">
+                    <ion-icon name="menu-outline"></ion-icon>
                     <a href="#" class="action-btn">Apply</a>
-                    <!-- <button type="button" class="nav-menu" data-bs-toggle="modal" data-bs-target="#offcanvas-nav">
-                        <span class="material-symbols-outlined">
-                            menu
-                        </span>
-                    </button> -->
-                    <!-- <div class="modal fade" id="offcanvas-nav" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <img src="{% static 'knowescape/brand/nav-logo.png' %}">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <ul class="main-nav">
-                                        <li class="nav-item">
-                                            <a href="" class="nav-link">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="" class="nav-link has-menu">Our Services</a>
-                                            <ul class="sub-nav-list no-display">
-                                                <li class="nav-item sub-nav-item">
-                                                    <a href="{% url 'start-up' %}" class="nav-link">Start-Up Support</a>
-                                                </li>
-                                                <li class="nav-item sub-nav-item">
-                                                    <a href="{% url 'skills-dev' %}" class="nav-link">Skills Development</a>
-                                                </li>
-                                                <li class="nav-item sub-nav-item">
-                                                    <a href="{% url 'es-dev' %}" class="nav-link">Enterprise & Supplier Development</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{% url 'contact' %}" class="nav-link">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="action-link site-btn">Apply</a>
-                                    <ul class="sub-nav-list no-display">
-                                        <li class="nav-item sub-nav-item">
-                                            <a href="{% url 'learner-signup' %}" class="nav-link">As an individual</a>
-                                        </li>
-                                        <li class="nav-item  sub-nav-item">
-                                            <a href="{% url 'company-signup' %}" class="nav-link">As an Enterprise</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                </div>
             </nav>
             <div class="header-text">
                 <h1 class="site-header">
                     Development through<br>
                     <span>Empowerment</span>
                 </h1>
-                <p>
+                <p class="site-p">
                     Empowering individuals and organizations through comprehensive
                     consultancy and training services, to foster <span>growth</span> and 
                     <span>sustainability</span> in our local communities.
                 </p>
                 <div class="header-actions">
-                    <a href="#" class="action-btn">Apply</a>
+                    <a href="#" class="site-btn apply">Apply</a>
                 </div>
             </div>
             <div class="header-images">
                 <div class="img-container">
-                    <img class="header-img first inner" src="{% static 'knowescape/images/header-truck.jpg' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
-                    <img class="header-img second outer"  src="{% static 'knowescape/images/header-warehouse.jpg' %}" loading="lazy">
-                    <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
-                    <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.jpeg' %}" loading="lazy">
+                    <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.jpg' %}" loading="lazy">
+                    <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.jpg' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
                     <div class="logo">
                         <img src="{% static 'knowescape/brand/logo - glow.png' %}" alt="">
                     </div>
+                    <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
+                    <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.jpeg' %}" loading="lazy">
                 </div>
             </div>
         </div>
