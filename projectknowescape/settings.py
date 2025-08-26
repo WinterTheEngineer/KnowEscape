@@ -31,7 +31,9 @@ SECRET_KEY = '6z#9p$kx%2v!m3n5r8t0w&yq1j*lf4h7c@d2b#e$gu^i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'localhost',
+                '.ngrok-free.app',
                 'knowescape.co.za',
                  'www.knowescape.co.za',
                  '.vercel.app'
