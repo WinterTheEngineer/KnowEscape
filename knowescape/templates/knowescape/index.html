@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <meta name="KnowEscape Consulting"/>
+    <meta name="theme-color" content="#14201B">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <meta name="author" content="KnowEscape">
     <meta name="robots" content="index, follow">
     <meta name="language" content="english">
@@ -34,7 +37,7 @@
     
     <link rel="stylesheet" href="{% static 'knowescape/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
 
     <title>KnowEscape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
@@ -48,7 +51,7 @@
                 <a href="/" class="nav-brand">
                     <img src="{% static 'knowescape/brand/text logo - slim.png' %}">
                 </a>
-                <ul>
+                <ul class="nav-list">
                     <li>
                         <a href="{% url 'home' %}">Home</a>
                     </li>
@@ -77,7 +80,7 @@
                     <a class="site-btn nav-toggle" data-bs-toggle="offcanvas" href="#responsive-nav" role="button" aria-controls="responsive-nav">
                         <ion-icon name="menu-outline"></ion-icon>
                     </a>
-                    <a href="#" class="action-btn">Apply</a>
+                    <a href="#" class="site-btn apply">Apply</a>
                 </div>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="responsive-nav" aria-labelledby="offcanvasLabel">
                     <div class="offcanvas-header">
@@ -215,27 +218,27 @@
             </div>
             <div class="header-images">
                 <div class="img-container">
-                    <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.jpg' %}" loading="lazy">
-                    <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.jpg' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
+                    <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.webp' %}" loading="lazy">
+                    <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.webp' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
                     <div class="logo">
                         <img src="{% static 'knowescape/brand/logo - glow.png' %}" alt="">
                     </div>
                     <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
-                    <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.jpeg' %}" loading="lazy">
+                    <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.webp' %}" loading="lazy">
                 </div>
             </div>
         </div>
     </header>
     <section id="cta">
-        <div class="container-fluid cta-container">
+        <div class="cta-container">
             <h2 class="site-header">
                 Here at <span>KnowEscape Consulting,</span><br>
                 We help hundreds of business owners
                 transform their communities - <span>Big</span> and <span>Small</span>
             </h2>
-            <a href="#services" class="action-btn">Join Us</a>
+            <a href="#services" class="site-btn">Join Us</a>
         </div>
-        <div class="container-fluid" id="cta-extension">
+        <div id="cta-extension">
             <div class="cta-header">
                 <div class="d-flex align-items-center">
                     <img class="cta-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
@@ -269,8 +272,8 @@
             <div class="value-header">
                 <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
                 <h2 class="site-header">
-                    Why Businesses<br>
-                    <span>Choose Us</span>
+                    Why Businesses Choose<br>
+                    <span>Know</span>Escape
                 </h2>
                 <p>
                     Empowering individuals and organizations through 
@@ -281,26 +284,25 @@
             <div class="value-row">
                 <div class="value-card">
                     <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5>Masterful Faculty</h5>
+                    <h5 class="site-header">Masterful Faculty</h5>
                     <p>
                         Our faculty comprises industry veterans with decades of 
-                        hands-on experience, dedicated to imparting knowledge with 
-                        precision and insight. Elevate your learning with mentors 
+                        hands-on experience, dedicated to imparting insightful knowledge. Elevate your learning with mentors 
                         who set the standard for excellence.
                     </p>
                 </div>
                 <div class="value-card">
                     <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5>Client-First Approach</h5>
+                    <h5 class="site-header">Client-First Approach</h5>
                     <p>
-                        Your success is our priority. From start to finish, we listen, 
+                        Your success is our priority. From start to finish -- we listen, 
                         adapt, and support you every step of the way, ensuring 
                         a seamless and personalized experience.
                     </p>
                 </div>
                 <div class="value-card">
                     <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5>Proven Results</h5>
+                    <h5 class="site-header">Proven Results</h5>
                     <p>
                         Don't just take our word for it—our track record speaks for 
                         itself. Join countless satisfied clients who've seen real 
@@ -309,7 +311,7 @@
                 </div>
                 <div class="value-card">
                     <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5>Unmatched Expertise</h5>
+                    <h5 class="site-header">Unmatched Expertise</h5>
                     <p>
                         With years of experience and a passion for innovation, 
                         our team delivers solutions tailored to your needs. 
