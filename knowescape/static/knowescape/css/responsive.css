@@ -454,4 +454,28 @@
         width: 16rem;
         height: 16rem;
     }
+
+    .value-header {
+        margin-bottom: 5rem;
+    }
+
+    .value-header img {
+        height: 6rem;
+    }
+
+    .value-header h2 {
+        font-size: 3rem;
+    }
+
+    .value-header p {
+        font-size: 1rem;
+    }
+
+    .value-card h5 {
+        font-size: 2rem;
+    }
+
+    .value-card p {
+        font-size: 1rem;
+    }
 }
