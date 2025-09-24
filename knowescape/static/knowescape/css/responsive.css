@@ -1,3 +1,11 @@
+:root {
+    --dark-green: #14201B;
+    --light-green: #1A382B;
+    --orange: #FF6A00;
+    --orange-grd: linear-gradient(to bottom, var(--orange), #ff9244);
+    --white-grd: linear-gradient(to bottom, #ffffff 50%, #d1d1d1);
+}
+
 @media screen and (min-width: 720px) {
     .glow {
         top: 0;
@@ -47,8 +55,19 @@
     .header-img.inner.third {
         right: 15%;
         /* transform: translateX(-50%); */
-    }  
-    
+    }
+
+    .cta-text {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .cta-images {
+        width: 80%;
+        height: 70vh;
+        margin: 0 auto;
+    }
+
     .cta-container h2 {
         width: 60%;
     }
@@ -70,12 +89,51 @@
         flex: 0 0 calc(50% - 2rem);
     }
 
+    .services-container {
+        padding: 2rem;
+    }
+
+    .services-header h2 {
+        font-size: 3rem;
+    }
+
+    .services-header p {
+        width: 60%;
+        margin: 2rem 0;
+        font-size: .9rem;
+    }
+
+    .service-card {
+        min-width: 45%;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        padding: 0 2rem;
+    }
+
+    .footer-column > h5 {
+        font-size: .9rem;
+    }
+
+    .footer-column > li,
+    .footer-column > li > a {
+        font-size: .75rem;
+    }
+
     .footer-links {
         flex-direction: row;
     }
 
     .column-block.contacts {
         gap: 2rem;
+        flex-direction: row;
+    }
+
+    .copyrights {
         flex-direction: row;
     }
 }
@@ -143,6 +201,19 @@
         flex: 1;
     }
 
+    .service-row {
+        overflow-x: initial;
+    }
+
+    .service-card {
+        flex: 1;
+        min-width: auto;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
     .footer-divider {
         margin: 0;
     }
@@ -178,6 +249,11 @@
 
     header {
         height: 130vh;
+    }
+    
+    header,
+    section {
+        margin-bottom: 10rem;
     }
 
     .header-container {
@@ -296,6 +372,10 @@
         background-color: var(--dark-green);
     }
 
+    .header-actions .site-btn {
+        width: 9rem;
+    }
+
     .nav-toggle {
         display: none;
     }
@@ -340,7 +420,32 @@
     }
 
     .header-images .logo img {
-        height: 25rem;
+        height: 21rem;
+    }
+
+    #cta-extension {
+        padding: 2rem;
+        flex-direction: row;
+    }
+
+    .cta-text {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cta-text p {
+        font-size: 1.2rem;
+    }
+
+    .cta-text .site-btn {
+        width: 16rem;
+        display: flex;
+        padding: 1rem 0;
+        color: #ffffff;
+        margin: 2rem 0;
+        background: var(--orange-grd);
     }
 
     .value-header h2 {
@@ -367,6 +472,30 @@
     
     .value-card p {
         text-align: left;
+    }
+
+    .services-container {
+        /* display: flex; */
+        padding: 2rem;
+    }
+
+    .services-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .services-header p {
+        width: 80%;
+        margin: 1rem 0;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card .actions .site-btn {
+        padding: .5rem 0;
     }
 
     .footer-container {
@@ -404,9 +533,18 @@
         transform: scaleX(1);
         transform-origin: left;
     }
+
+    #contact form {
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 1650px) {
+    
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+
     header {
         height: 120vh;
     }
@@ -434,7 +572,7 @@
     }
 
     .header-images .logo img {
-        height: 30rem;
+        height: 26rem;
     }
 
     .header-img.inner {
@@ -476,6 +614,28 @@
     }
 
     .value-card p {
+        font-size: 1rem;
+    }
+
+    .services-logo {
+        height: 100%;
+    }
+
+    .services-header p {
+        width: 30%;
+    }
+
+    .service-card {
+        flex: .25;
+        max-height: 30rem;
+    }
+
+    .service-card h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    .service-card p {
         font-size: 1rem;
     }
 }

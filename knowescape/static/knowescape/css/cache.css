@@ -563,6 +563,7 @@ nav ul li:hover .sub-nav {
 
 .service-card {
     flex: .3;
+    max-height: 20rem;
     border-radius: .5rem;
     background: linear-gradient(to bottom, #ffffff25, #ffffff00);
 }

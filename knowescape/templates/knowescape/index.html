@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
-    <meta name="KnowEscape Consulting"/>
+    <meta name="Knowescape Consulting"/>
     <meta name="theme-color" content="#14201B">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <meta name="author" content="KnowEscape">
+    <meta name="author" content="Knowescape">
     <meta name="robots" content="index, follow">
     <meta name="language" content="english">
     <meta name="description" content="Empowerment through Skills Development, Enterprise and Supplier Development, and Start-Up Support">
@@ -21,7 +21,7 @@
     <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
     <meta property="og:description" content="empowering individuals and organizations through comprehensive consultancy and training services.">
     <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="KnowEscape">
+    <meta property="og:site_name" content="Knowescape">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
 
-    <title>KnowEscape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
+    <title>Knowescape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
 </head>
 <body>
     <div class="overlay"></div>
@@ -214,6 +214,7 @@
                 </p>
                 <div class="header-actions">
                     <a href="#" class="site-btn apply">Apply</a>
+                    <a href="#" class="site-btn more">Learn More</a>
                 </div>
             </div>
             <div class="header-images">
@@ -221,7 +222,7 @@
                     <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.webp' %}" loading="lazy">
                     <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.webp' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
                     <div class="logo">
-                        <img src="{% static 'knowescape/brand/logo - glow.png' %}" alt="">
+                        <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
                     </div>
                     <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
                     <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.webp' %}" loading="lazy">
@@ -229,42 +230,39 @@
             </div>
         </div>
     </header>
+    <section id="cta-extension">
+        <div class="cta-text site-p">
+            <p>
+                Knowescape Consulting is dedicated to empowering individuals and organizations through 
+                comprehensive consultancy and training services.
+                
+                <br><br>Based in Kempton Park, 
+                Gauteng, we specialize in Skills Development, Enterprise and Supplier 
+                Development, and Start-Up Support, with a focus on fostering growth and
+                    sustainability in our local communities.
+            </p>
+            <a href="#services" class="site-btn">Develop my Business</a>
+        </div>
+        <div class="cta-images">
+            <div class="grid-img first">
+                <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
+            </div>
+            <div class="grid-img second">
+                <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
+            </div>
+            <div class="grid-img third">
+                <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
+            </div>
+        </div>
+    </section>
     <section id="cta">
         <div class="cta-container">
             <h2 class="site-header">
-                Here at <span>KnowEscape Consulting,</span><br>
+                Here at <span>Knowescape Consulting,</span><br>
                 We help hundreds of business owners
                 transform their communities - <span>Big</span> and <span>Small</span>
             </h2>
             <a href="#services" class="site-btn">Join Us</a>
-        </div>
-        <div id="cta-extension">
-            <div class="cta-header">
-                <div class="d-flex align-items-center">
-                    <img class="cta-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
-                    <h2 class="site-header">
-                        With <span>KnowEscape Consulting,</span><br>
-                        You can <span>make the most</span> of your business
-                        - <span>Any Business</span>
-                    </h2>
-                </div>
-                <div class="cta-text">
-                    <p>
-                        We are dedicated to empowering individuals and organizations through 
-                        comprehensive consultancy and training services.
-                        
-                        <br><br>Based in Kempton Park, 
-                        Gauteng, we specialize in Skills Development, Enterprise and Supplier 
-                        Development, and Start-Up Support, with a focus on fostering growth and
-                         sustainability in our local communities.
-                    </p>
-                </div>
-            </div>
-            <div class="cta-images">
-                <img src="{% static '/knowescape/images/cta/cta-1.jpeg' %}" alt="" loading="lazy">
-                <img src="{% static '/knowescape/images/cta/cta-2.jpg' %}" alt="" loading="lazy">
-                <img src="{% static '/knowescape/images/cta/cta-3.jpg' %}" alt="" loading="lazy">
-            </div>
         </div>
     </section>
     <section id="value">
@@ -275,7 +273,7 @@
                     Why Businesses<br>
                     <span>Choose Us</span>
                 </h2>
-                <p>
+                <p class="site-p">
                     Empowering individuals and organizations through 
                     comprehensive consultancy and training services, 
                     to foster growth and sustainability in our local communities.
@@ -325,8 +323,8 @@
         <!-- <img src="{% static 'knowescape/brand/logo - glow.png' %}" id="services-logo" alt=""> -->
         <div class="container-fluid services-container">
             <div class="services-header">
-                <h2>Our services<br><span>at a glance...</span></h2>
-                <p class="tagline">
+                <h2 class="site-header">Our services<br><span>at a glance...</span></h2>
+                <p class="site-p">
                     We offer a range of services to equip you with all the fundamental skills 
                     to transform your business, empowering you to navigate challenges, 
                     seize opportunities, and achieve sustainable growth with confidence.
@@ -338,15 +336,14 @@
                         <img src="{% static 'knowescape/images/services-esdev.jpeg' %}" alt="">
                     </div>
                     <div class="details">
-                        <h3 class="card-header">Enterprise & Supplier Development</h3>
-                        <p>
+                        <h3 class="site-header">Enterprise & Supplier Development</h3>
+                        <p class="site-p">
                             With years of experience and a passion for innovation, 
-                            our team delivers solutions tailored to your needs. 
-                            We don't just meet expectations—we exceed them, every time.
+                            our team delivers solutions tailored to your needs.
                         </p>
                         <div class="actions">
-                            <a href="#services" class="action-btn learn">Learn More</a>
-                            <a href="#services" class="action-btn">Join Us</a>
+                            <a href="#services" class="site-btn apply">Join Us</a>
+                            <a href="#services" class="site-btn more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -355,14 +352,14 @@
                         <img src="{% static 'knowescape/images/services-skills.jpg' %}" alt="">
                     </div>
                     <div class="details">
-                        <h3 class="card-header">Skills Development</h3>
-                        <p>
+                        <h3 class="site-header">Skills Development</h3>
+                        <p class="site-p">
                             Equipping you with all the right skills to 
-                            build your thriving brand or business.
+                            build or develop your thriving brand or business beyond expectation.
                         </p>
                         <div class="actions">
-                            <a href="#services" class="action-btn learn">Learn More</a>
-                            <a href="#services" class="action-btn">Join Us</a>
+                            <a href="#services" class="site-btn apply">Join Us</a>
+                            <a href="#services" class="site-btn more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -371,19 +368,20 @@
                         <img src="{% static 'knowescape/images/services-startup.jpeg' %}" alt="">
                     </div>
                     <div class="details">
-                        <h3 class="card-header">Startup Support</h3>
-                        <p>
+                        <h3 class="site-header">Startup Support</h3>
+                        <p class="site-p">
                             Guidance and support from industry veterans to help 
                             navigate the uncertainty of the modern-day market.
                         </p>
                         <div class="actions">
-                            <a href="#services" class="action-btn learn">Learn More</a>
-                            <a href="#services" class="action-btn">Join Us</a>
+                            <a href="#services" class="site-btn apply">Join Us</a>
+                            <a href="#services" class="site-btn more">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <img class="services-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
     </section>
     <section id="faculty">
         <div class="container-fluid faculty-container">
@@ -471,9 +469,8 @@
         <div class="container-fluid contact-container">
             <div class="contact-header">
                 <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                <h2 class="section-title">Take the first step</h2>
-                <hr>
-                <p>
+                <h2 class="site-header">Take the first step</h2>
+                <p class="site-p">
                     How can we help <span>transform your business?</span>
                 </p>
             </div>
@@ -504,7 +501,7 @@
                     <textarea name="message" rows="10" required id="id_message"></textarea>
                 </div>
                 <div class="form-block submit-block">
-                    <button class="action-btn" type="submit">Send</button>                         
+                    <button class="site-btn" type="submit">Send</button>                         
                 </div>
             </form>
         </div>         
