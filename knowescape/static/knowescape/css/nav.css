@@ -1,0 +1,86 @@
+nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    flex: .3;
+    height: 100%;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-actions {
+    flex: .3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-actions .apply {
+    display: none;
+}
+
+.nav-actions .nav-toggle {
+    padding: .5rem;
+    min-width: min-content;
+    background-color: transparent;
+}
+
+.nav-actions ion-icon {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.nav-brand img {
+    height: 100%;
+}
+
+#responsive-nav {
+    background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green));
+}
+
+#responsive-nav .offcanvas-header {
+    height: 6rem;
+    margin-bottom: 2rem;
+}
+
+#responsive-nav ul {
+    margin: 0;
+    padding: 0;
+    gap: .5rem;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#responsive-nav li {
+    display: flex;
+    position: relative;
+    border-radius: .25rem;
+    flex-direction: column;
+}
+
+#responsive-nav ul li a {
+    width: 100%;
+    padding: .5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-family: 'Instrument Serif';
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#responsive-nav ul li .sub-nav {
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    border-radius: .5rem;
+    flex-direction: column;
+    background-color: #0f1814;
+}
