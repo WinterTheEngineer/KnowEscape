@@ -12,6 +12,28 @@
         padding: 2rem;
     }
 
+    .header-text {
+        height: 40%
+    }
+
+    .header-images {
+        height: 60%
+    }
+
+    header .site-header {
+        font-size: 3rem
+    }
+
+    header .site-p {
+        width: 50%;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    header .site-btn.apply {
+        padding: 1rem;
+    }
+
     nav {
         height: 5rem;
     }
