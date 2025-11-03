@@ -35,11 +35,11 @@
     <link rel="icon" type="image/x-icon" href="{% static 'knowescape/brand/favicon.png' %}">
 
     
-    <link rel="stylesheet" href="{% static 'knowescape/css/start-up.css' %}">
+    <link rel="stylesheet" href="{% static 'knowescape/css/services.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/start-up-responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'knowescape/css/services-responsive.css' %}">
     <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
 
 
@@ -48,13 +48,46 @@
 <body>
     <div class="overlay"></div>
     <header id="header">
-        <div class="container-fluid header-container">
-            {% include 'knowescape/nav.html' %}
-            <h1 class="">Start-Up <span>Support</span></h1>
-            <a href="#" class="site-btn apply">Apply</a>
+        {% include 'knowescape/nav.html' %}
+        <div class="header-container">
+            <div class="header-text">
+                <h1 class="site-header"> 
+                    Start-Up <span>Support</span>
+                </h1>
+                <p class="site-p">      
+                    Turn your idea into a thriving business, And we'll guide you every step of the way.
+                </p>
+                <a href="#services" class="site-btn apply">Develop my Business</a>
+            </div>
+            <div class="header-images">
+                <div class="grid-img first">
+                    <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
+                </div>
+                <div class="grid-img second">
+                    <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
+                </div>
+                <div class="grid-img third">
+                    <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
+                </div>
+            </div>
         </div>
     </header>
+    
     {% include 'knowescape/footer.html' %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.video-bg');
+            if (video) {
+                video.muted = true; // ensure muted
+                video.playsInline = true;
+                video.setAttribute('webkit-playsinline', 'true');
+                video.play().catch(err => {
+                console.log("Autoplay blocked:", err);
+                });
+            }
+        });
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
