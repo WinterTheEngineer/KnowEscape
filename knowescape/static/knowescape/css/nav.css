@@ -77,6 +77,7 @@ nav {
 }
 
 #responsive-nav ul li .sub-nav {
+    z-index: 99;
     padding: .5rem;
     margin-top: .5rem;
     margin-left: 1rem;

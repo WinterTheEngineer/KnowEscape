@@ -72,7 +72,76 @@
             </div>
         </div>
     </header>
-    
+    <section id="key-offerings">
+        <div class="offerings-header">
+            <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">Key Offerings</h2>
+        </div>
+        <div class="accordion" id="key-points">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Business Foundation Building
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Helping start-ups establish a strong foundation 
+                        with sound operational practices, a clear business 
+                        model, and effective governance structures.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Market Entry and Expansion:
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Guidance on how to enter new markets, including market research, competitor analysis, and entry strategy.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Funding and Investment Support:
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Advice on securing funding, including preparing pitch decks, connecting with investors, and exploring various financing options.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Regulatory Compliance:
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Assistance in navigating the complex regulatory environment to ensure the business meets all legal requirements.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Business Planning and Strategy Development:
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Assistance in creating a solid business plan that outlines clear goals, strategies, and action plans.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {% include 'knowescape/footer.html' %}
 
     <script>

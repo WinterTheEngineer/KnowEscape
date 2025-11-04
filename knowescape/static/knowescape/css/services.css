@@ -99,7 +99,7 @@ nav {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
-    height: 5rem !important;
+    height: 5rem;
     /* background: linear-gradient(to bottom, var(--dark-green) 80%, var(--dark-green)); */
 }
 
@@ -159,6 +159,49 @@ header .site-btn.apply {
     object-fit: cover;
 }
 
+#key-offerings {
+    height: 100%;
+    padding: 1rem;
+    margin: 5rem 0;
+}
+
+.offerings-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.offerings-header img {
+    height: 2rem;
+}
+
+#key-offerings .site-header {
+    width: fit-content;
+    margin: 1rem 0 2rem 0;
+}
+
 .first { grid-area: first; }
 .second { grid-area: second; }
 .third { grid-area: third; }
+
+#key-points {
+    background: linear-gradient(to bottom, #ffffff10, #ffffff00);
+}
+
+#key-points .accordion-item {
+    background-color: #00000000;
+}
+
+#key-points .accordion-item {
+    border: 1px solid #ffffff10;
+}
+
+#key-points .accordion-button {
+    outline: none;
+    color: #ffffff60;
+    background-color: #ffffff10;
+}
+
+#key-points .accordion-body {
+    color: #ffffff60;
+}
