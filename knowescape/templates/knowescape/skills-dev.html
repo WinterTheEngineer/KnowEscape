@@ -55,7 +55,10 @@
                     Skills <span>Development</span>
                 </h1>
                 <p class="site-p">      
-                    We develop talent that drives business success — building capable, confident, and future-ready teams
+                    tailored training programs
+                    designed to enhance the skills and
+                    experience of individuals and teams
+                    across various industries.
                 </p>
                 <a href="#services" class="site-btn apply">Develop my Business</a>
             </div>
@@ -72,7 +75,108 @@
             </div>
         </div>
     </header>
-    
+    <section id="cta-extension">
+        <div class="cta-text site-p">
+            <h2 class="site-header">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quos, quisquam. Accusantium optio voluptas asperiores.
+            </h2>
+            <a href="#services" class="site-btn">Develop my Business</a>
+        </div>
+    </section>
+    <section id="startup">
+        <div class="startup-text">
+            <h2 class="site-header">What is<br><span>Skills Development</span></h2>
+            <p class="site-p">
+                <span>
+                    Tailored training programs
+                    designed to enhance the skills and
+                    experience of individuals and teams
+                    across various industries.
+                </span>
+                <br><br>
+                Our courses range
+                from technical skills to leadership,
+                management development as well as
+                learnerships, ensuring that participants are
+                well-prepared to meet the demands of the
+                modern workplace.
+            </p>
+            <a href="#services" class="site-btn">Develop my Skills</a>
+        </div>
+        <video autoplay muted loop>
+            <source src="{% static 'knowescape/images/vid/start-up-header.webm' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <section id="key-offerings">
+        <div class="offerings-header">
+            <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">Key Offerings</h2>
+        </div>
+        <div class="accordion" id="key-points">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Technical Skills Training
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Customized training modules in industry-specific technical skills that align with current market needs.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Leadership and Management Development
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Programs aimed at developing strong leadership skills, fostering effective management practices, and nurturing future leaders.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Learnerships
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Offering structured learning programs that combine theoretical and practical training to develop skilled professionals ready to enter the workforce.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Continuous Professional Development (CPD)
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Opportunities for ongoing education to keep professionals up-to-date with the latest industry trends and practices.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Business Planning and Strategy Development:
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Assistance in creating a solid business plan that outlines clear goals, strategies, and action plans.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {% include 'knowescape/footer.html' %}
 
     <script>

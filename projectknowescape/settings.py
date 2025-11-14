@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '6z#9p$kx%2v!m3n5r8t0w&yq1j*lf4h7c@d2b#e$gu^i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG").lower() == "true"
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
@@ -94,9 +94,13 @@ WSGI_APPLICATION = 'projectknowescape.wsgi.application'
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("dbname", "postgres"),
+        "USER": os.getenv("user", "postgres"),
+        "PASSWORD": os.getenv("password", ""),
+        "HOST": os.getenv("host", "db.xyz.supabase.co"),  # Your Supabase host
+        "PORT": os.getenv("port", "5432"),
     }
 }
 

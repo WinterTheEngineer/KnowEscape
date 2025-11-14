@@ -277,6 +277,7 @@
     
     .nav-list > li {
         display: grid;
+        z-index: 99;
         position: relative;
         place-content: center;
         transition: transform .3s ease;
@@ -323,6 +324,7 @@
         left: 0;
         top: 2.5rem;
         opacity: 0;
+        z-index: 99;
         padding: .5rem;
         visibility: hidden;
         position: absolute;

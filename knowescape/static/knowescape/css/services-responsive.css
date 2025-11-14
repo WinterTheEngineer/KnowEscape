@@ -38,6 +38,36 @@
         height: 5rem;
     }
 
+    #cta-extension {
+        width: 60%;
+        margin: auto;
+    }
+
+    .cta-header {
+        flex-direction: row;
+    }
+
+    #startup {
+        gap: 2rem;
+        display: flex;
+        padding: 2rem;
+        margin: 5rem auto;
+    }
+
+    #startup .site-header {
+        font-size: 2.5rem;
+    }
+
+    .startup-text .site-p,
+    .startup-text .site-btn {
+        width: 80%;
+    }
+    
+    #startup video {
+        width: 30rem;
+        border-radius: .5rem;
+    }
+
     #key-offerings {
         width: 60%;
         margin: 5rem auto;
@@ -100,6 +130,7 @@
     }
 
     .header-text {
+        z-index: 0;
         text-align: center;
         height: fit-content;
     }
@@ -122,6 +153,31 @@
         gap: 1rem; 
         grid-template-areas: 
             "first second third"
+    }
+
+    #cta-extension {
+        width: 40%;
+    }
+
+    #cta-extension .site-btn {
+        margin: auto;
+        width: 40%;
+    }
+
+    .startup-text {
+        width: 50%;
+    }
+
+    #startup video {
+        width: 40%;
+    }
+
+    #startup .site-btn {
+        width: 30%;
+    }
+
+    .startup-text .site-p {
+        font-size: 1rem;
     }
 
     .footer-divider {
@@ -220,6 +276,7 @@
         left: 0;
         top: 2.5rem;
         opacity: 0;
+        z-index: 99 !important;
         padding: .5rem;
         visibility: hidden;
         position: absolute;

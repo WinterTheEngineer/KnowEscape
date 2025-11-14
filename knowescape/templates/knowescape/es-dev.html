@@ -52,11 +52,12 @@
         <div class="header-container">
             <div class="header-text">
                 <h1 class="site-header"> 
-                    Enterprise & Supplier<br>
-                    <span>Development</span>
+                    Enterprise and Supplier<br><span>Development</span>
                 </h1>
                 <p class="site-p">      
-                    We help enterprises unlock supplier potential — driving inclusive growth, competitive advantage, and lasting impact
+                    Supporting the growth of local
+                    enterprises, ensuring they can compete
+                    effectively in both local and global markets.
                 </p>
                 <a href="#services" class="site-btn apply">Develop my Business</a>
             </div>
@@ -73,7 +74,100 @@
             </div>
         </div>
     </header>
-    
+    <section id="cta-extension">
+        <div class="cta-text site-p">
+            <h2 class="site-header">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quos, quisquam. Accusantium optio voluptas asperiores.
+            </h2>
+            <a href="#services" class="site-btn">Develop my Business</a>
+        </div>
+    </section>
+    <section id="startup">
+        <div class="startup-text">
+            <h2 class="site-header">What is<br><span>Enterprise & Supplier Development</span></h2>
+            <p class="site-p">
+                <span>
+                Comprehensive support to
+                entrepreneurs and start-ups, from initial
+                business planning and strategy
+                development to market entry and scaling.
+                </span>
+                <br><br>
+                This means we help you get clear on your idea,
+                understand your market, and build a solid plan 
+                for your business. We guide you through the early 
+                steps—like choosing the right structure, setting 
+                up your operations, and creating a strategy that 
+                actually works. Whether you're just starting out 
+                or preparing to launch, you get practical support, 
+                clear direction, and a partner who makes the whole process easier.
+            </p>
+            <a href="#services" class="site-btn">Develop my Enterprise</a>
+        </div>
+        <video autoplay muted loop>
+            <source src="{% static 'knowescape/images/vid/start-up-header.webm' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <section id="key-offerings">
+        <div class="offerings-header">
+            <img src="{% static 'knowescape/brand/logo - slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">Key Offerings</h2>
+        </div>
+        <div class="accordion" id="key-points">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Sustainable Business Practices
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Detailed consultations to establish and implement 
+                        long-term strategies that ensure business sustainability.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Operational Efficiency
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Audits and recommendations to optimize business processes, reduce waste, and improve productivity.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Supply Chain Enhancement
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Support in developing a robust and responsive supply chain that can adapt to market changes.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        B-BBEE Implementation Partner
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                    <div class="accordion-body">
+                        Expertise in helping businesses meet their Broad-Based Black Economic Empowerment 
+                        (B-BBEE) compliance requirements, leveraging transformative spend effectively.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {% include 'knowescape/footer.html' %}
 
     <script>
