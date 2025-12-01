@@ -1,203 +1,113 @@
+{% extends 'knowescape/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <meta name="Knowescape Consulting"/>
-    <meta name="theme-color" content="#14201B">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Startup Support | Knowescape Consulting{% endblock %}
+{% block description %}Guidance and support for startups to navigate the modern market successfully.{% endblock %}
 
-
-    <meta name="author" content="Knowescape">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="english">
-    <meta name="description" content="Empowerment through Skills Development, Enterprise and Supplier Development, and Start-Up Support">
-
-    <meta property="og:title" content="Skills and Business Development">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://knowescape.com">
-    <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
-    <meta property="og:description" content="empowering individuals and organizations through comprehensive consultancy and training services.">
-    <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="Knowescape">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-    <!-- CDNs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- imports -->
-    <link rel="icon" type="image/x-icon" href="{% static 'knowescape/brand/favicon.png' %}">
-
-    
+{% block page_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/services.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
+{% endblock page_styles %}
+
+{% block responsive_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/services-responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
+{% endblock responsive_styles %}
 
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Startup Support",
+  "provider": {
+    "@type": "Organization",
+    "name": "Knowescape Consulting",
+    "url": "https://knowescape.co.za"
+  },
+  "description": "Guidance and support for startups to navigate the modern market successfully.",
+  "url": "https://knowescape.co.za/start-up"
+}
+</script>
+{% endblock %}
 
-    <title>{{page_title}} - KnowEscape</title>
-</head>
-<body>
-    <div class="overlay"></div>
-    <header id="header">
-        {% include 'knowescape/nav.html' %}
-        <div class="header-container">
-            <div class="header-text">
-                <h1 class="site-header"> 
-                    Start-Up <span>Support</span>
-                </h1>
-                <p class="site-p">      
-                    Turn your idea into a thriving business, And we'll guide you every step of the way.
-                </p>
-                <a href="#services" class="site-btn apply">Develop my Business</a>
-            </div>
-            <div class="header-images">
-                <div class="grid-img first">
-                    <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
-                </div>
-                <div class="grid-img second">
-                    <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
-                </div>
-                <div class="grid-img third">
-                    <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </header>
-    <section id="cta-extension">
-        <div class="cta-text site-p">
-            <h2 class="site-header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quos, quisquam. Accusantium optio voluptas asperiores.
-            </h2>
-            <a href="#services" class="site-btn">Develop my Business</a>
-        </div>
-    </section>
-    <section id="startup">
-        <div class="startup-text">
-            <h2 class="site-header">What is<br><span>Startup Support</span></h2>
+{% block content %}
+<div class="overlay"></div>
+<header id="header">
+    {% include 'knowescape/nav.html' %}
+    <div class="header-container">
+        <div class="header-text">
+            <h1 class="site-header">
+                Startup <span>Support</span>
+            </h1>
             <p class="site-p">
-                <span>
-                Comprehensive support to
-                entrepreneurs and start-ups, from initial
-                business planning and strategy
-                development to market entry and scaling.
-                </span>
-                <br><br>
-                This means we help you get clear on your idea,
-                understand your market, and build a solid plan 
-                for your business. We guide you through the early 
-                steps—like choosing the right structure, setting 
-                up your operations, and creating a strategy that 
-                actually works. Whether you're just starting out 
-                or preparing to launch, you get practical support, 
-                clear direction, and a partner who makes the whole process easier.
+                Expert guidance and mentorship to help startups navigate uncertainty and grow sustainably.
             </p>
-            <a href="#services" class="site-btn">Develop my Startup</a>
+            <a href="{% url 'company-signup' %}" class="site-btn apply">Launch My Startup</a>
         </div>
-        <video autoplay muted loop>
-            <source src="{% static 'knowescape/images/vid/start-up-header.webm' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-    <section id="key-offerings">
-        <div class="offerings-header">
-            <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-            <h2 class="site-header">Key Offerings</h2>
+        <div class="header-images">
+            <div class="grid-img first">
+                <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
+            </div>
+            <div class="grid-img second">
+                <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
+            </div>
+            <div class="grid-img third">
+                <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
+            </div>
         </div>
-        <div class="accordion" id="key-points">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Business Foundation Building
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        We help startups lay a solid foundation for sustainable growth — establishing efficient operations, a clear and profitable business model, and strong governance structures that inspire investor confidence.
-                    </div>
-                </div>
-            </div>
+    </div>
+</header>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Market Entry and Expansion
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Gain the insights and strategy needed to enter — and thrive in — new markets. From in-depth market research to competitor analysis and tailored entry plans, we help you expand with confidence and precision.
-                    </div>
-                </div>
-            </div>
+<section id="cta-extension">
+    <div class="cta-text site-p">
+        <h2 class="site-header">
+            From concept to launch, we support every step of your startup journey.
+        </h2>
+        <a href="{% url 'company-signup' %}" class="site-btn">Start My Startup</a>
+    </div>
+</section>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Funding and Investment Support
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Turn great ideas into funded ventures. We guide you through investor engagement, from crafting compelling pitch decks to identifying the right funding opportunities and building lasting investor relationships.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Regulatory Compliance
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Stay compliant and focused on growth. We simplify complex legal and regulatory requirements, ensuring your business operates with full confidence and credibility.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Business Planning and Strategy Development
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        We turn vision into actionable strategy. Our experts help you design a powerful business plan that defines your goals, clarifies your roadmap, and positions your venture for long-term success.
-                    </div>
+<section id="key-offerings">
+    <div class="offerings-header">
+        <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+        <h2 class="site-header">Key Offerings</h2>
+    </div>
+    <div class="accordion" id="key-points">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Business Planning & Strategy
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Help defining business models, market strategies, and operational plans for startups.
                 </div>
             </div>
         </div>
-    </section>
-    {% include 'knowescape/footer.html' %}
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.querySelector('.video-bg');
-            if (video) {
-                video.muted = true; // ensure muted
-                video.playsInline = true;
-                video.setAttribute('webkit-playsinline', 'true');
-                video.play().catch(err => {
-                console.log("Autoplay blocked:", err);
-                });
-            }
-        });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Market Research & Validation
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Support in understanding target markets and validating business ideas before launch.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Mentorship & Coaching
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Ongoing mentorship and guidance to navigate challenges and seize growth opportunities.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

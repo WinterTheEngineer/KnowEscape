@@ -1,532 +1,328 @@
+{% extends 'knowescape/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <meta name="Knowescape Consulting"/>
-    <meta name="theme-color" content="#14201B">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <meta name="author" content="Knowescape">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="english">
-    <meta name="description" content="Empowerment through Skills Development, Enterprise and Supplier Development, and Start-Up Support">
-
-    <meta property="og:title" content="Skills and Business Development">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://knowescape.com">
-    <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
-    <meta property="og:description" content="empowering individuals and organizations through comprehensive consultancy and training services.">
-    <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="Knowescape">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-    <!-- CDNs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- imports -->
-    <link rel="icon" type="image/x-icon" href="{% static 'knowescape/brand/favicon.png' %}">
-
-    
+{% block page_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
+{% endblock page_styles %}
+
+{% block responsive_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
+{% endblock responsive_styles %}
 
-    <title>Knowescape Consulting | Skills Development • Enterprise Development • Supplier Development • Startup Support</title>
-</head>
-<body>
-    <div class="overlay"></div>
-    <header id="header">
-        <div class="glow"></div>
-        <div class="header-container">
-            {% include 'knowescape/nav.html' %}
-            <div class="header-text">
-                <h1 class="site-header">
-                    Development through<br>
-                    <span>Empowerment</span>
-                </h1>
-                <p class="site-p">
-                    Empowering individuals and organizations through comprehensive
-                    consultancy and training services, to foster <span>growth</span> and 
-                    <span>sustainability</span> in our local communities.
-                </p>
-                <div class="header-actions">
-                    <a href="{% url 'company-signup' %}" class="site-btn apply">Apply</a>
-                    <a href="#cta" class="site-btn more">Learn More</a>
-                </div>
-            </div>
-            <div class="header-images">
-                <div class="img-container">
-                    <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.webp' %}" loading="lazy">
-                    <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.webp' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
-                    <div class="logo">
-                        <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
-                    <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.webp' %}" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </header>
-    <section id="cta-extension">
-        <div class="cta-text site-p">
-            <p>
-                Knowescape Consulting is dedicated to empowering individuals and organizations through 
-                comprehensive consultancy and training services.
-                
-                <br><br>Based in Kempton Park, 
-                Gauteng, we specialize in Skills Development, Enterprise and Supplier 
-                Development, and Start-Up Support, with a focus on fostering growth and
-                    sustainability in our local communities.
+{% block content %}
+<div class="overlay"></div>
+<header id="header">
+    <div class="glow"></div>
+    <div class="header-container">
+        {% include 'knowescape/nav.html' %}
+        <div class="header-text">
+            <h1 class="site-header">
+                Development through<br>
+                <span>Empowerment</span>
+            </h1>
+            <p class="site-p">
+                Empowering individuals and organizations through comprehensive
+                consultancy and training services, to foster <span>growth</span> and 
+                <span>sustainability</span> in our local communities.
             </p>
-            <a href="#services" class="site-btn">Develop my Business</a>
-        </div>
-        <div class="cta-images">
-            <div class="grid-img first">
-                <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
-            </div>
-            <div class="grid-img second">
-                <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
-            </div>
-            <div class="grid-img third">
-                <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
+            <div class="header-actions">
+                <a href="{% url 'company-signup' %}" class="site-btn apply">Apply</a>
+                <a href="#cta" class="site-btn more">Learn More</a>
             </div>
         </div>
-    </section>
-    <section id="cta">
-        <div class="cta-container">
-            <h2 class="site-header">
-                Here at <span>Knowescape Consulting,</span><br>
-                We help hundreds of business owners
-                transform their communities - <span>Big</span> and <span>Small</span>
-            </h2>
-            <a href="#services" class="site-btn">Join Us</a>
-        </div>
-    </section>
-    <section id="value">
-        <div class="container-fluid value-container">
-            <div class="value-header">
-                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                <h2 class="site-header">
-                    Why Businesses<br>
-                    <span>Choose Us</span>
-                </h2>
-                <p class="site-p">
-                    Empowering individuals and organizations through 
-                    comprehensive consultancy and training services, 
-                    to foster growth and sustainability in our local communities.
-                </p>
-            </div>
-            <div class="value-row">
-                <div class="value-card">
+        <div class="header-images">
+            <div class="img-container">
+                <img class="header-img first outer"  src="{% static 'knowescape/images/header-warehouse.webp' %}" loading="lazy">
+                <img class="header-img second inner" src="{% static 'knowescape/images/header-truck.webp' %}" alt="a floor worker operating machinery in a warehouse" loading="lazy">
+                <div class="logo">
                     <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5 class="site-header">Masterful Faculty</h5>
-                    <p>
-                        Our faculty comprises industry veterans with decades of 
-                        hands-on experience, dedicated to imparting insightful knowledge. Elevate your learning with mentors 
-                        who set the standard for excellence.
-                    </p>
                 </div>
-                <div class="value-card">
-                    <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5 class="site-header">Client-First Approach</h5>
-                    <p>
-                        Your success is our priority. From start to finish -- we listen, 
-                        adapt, and support you every step of the way, ensuring 
-                        a seamless and personalized experience.
-                    </p>
-                </div>
-                <div class="value-card">
-                    <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5 class="site-header">Proven Results</h5>
-                    <p>
-                        Don't just take our word for it—our track record speaks for 
-                        itself. Join countless satisfied clients who've seen real 
-                        impact and growth with our services.
-                    </p>
-                </div>
-                <div class="value-card">
-                    <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                    <h5 class="site-header">Unmatched Expertise</h5>
-                    <p>
-                        With years of experience and a passion for innovation, 
-                        our team delivers solutions tailored to your needs. 
-                        We don't just meet expectations — we exceed them, every time.
-                    </p>
-                </div>
+                <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
+                <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.webp' %}" loading="lazy">
             </div>
         </div>
-    </section>
-    <section id="services">
-        <!-- <img src="{% static 'knowescape/brand/logo - glow.png' %}" id="services-logo" alt=""> -->
-        <div class="container-fluid services-container">
-            <div class="services-header">
-                <h2 class="site-header">Our services<br><span>at a glance...</span></h2>
-                <p class="site-p">
-                    We offer a range of services to equip you with all the fundamental skills 
-                    to transform your business, empowering you to navigate challenges, 
-                    seize opportunities, and achieve sustainable growth with confidence.
-                </p>
-            </div>
-            <div class="service-row">
-                <div class="service-card">
-                    <div class="img">
-                        <img src="{% static 'knowescape/images/services-esdev.jpeg' %}" alt="">
-                    </div>
-                    <div class="details">
-                        <h3 class="site-header">Enterprise & Supplier Development</h3>
-                        <p class="site-p">
-                            With years of experience and a passion for innovation, 
-                            our team delivers solutions tailored to your needs.
-                        </p>
-                        <div class="actions">
-                            <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
-                            <a href="{% url 'es-dev' %}" class="site-btn more">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="img">
-                        <img src="{% static 'knowescape/images/services-skills.jpg' %}" alt="">
-                    </div>
-                    <div class="details">
-                        <h3 class="site-header">Skills Development</h3>
-                        <p class="site-p">
-                            Equipping you with all the right skills to 
-                            build or develop your thriving brand or business beyond expectation.
-                        </p>
-                        <div class="actions">
-                            <a href="{% url 'learner-signup' %}" class="site-btn apply">Join Us</a>
-                            <a href="{% url 'skills-dev' %}" class="site-btn more">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="img">
-                        <img src="{% static 'knowescape/images/services-startup.jpeg' %}" alt="">
-                    </div>
-                    <div class="details">
-                        <h3 class="site-header">Startup Support</h3>
-                        <p class="site-p">
-                            Guidance and support from industry veterans to help 
-                            navigate the uncertainty of the modern-day market.
-                        </p>
-                        <div class="actions">
-                            <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
-                            <a href="{% url 'start-up' %}" class="site-btn more">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img class="services-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
-    </section>
-    <section id="faculty">
-        <div class="container-fluid faculty-container">
-            <header>
-                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                <h2 class="site-header">
-                    Our <span>Faculty</span>
-                </h2>
-                <p>
-                    Meet the team of industry-renowned subject experts,
-                    responsible for turning your business into a success story.
-                </p>
-            </header>
-            <div class="faculty-cards">
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/norman.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Norman Manganyi</h4>
-                        <p>Founder, CEO</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Amahle.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Amahle</h4>
-                        <p>Social Media Manager</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Johan.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Johan Smit</h4>
-                        <p>Head of Accounting</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Kaitlyn.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Kaitlyn</h4>
-                        <p>General Manager</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Ronnie.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Ronnie Cheng</h4>
-                        <p>Instructor</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Ronnie.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Ronnie Cheng</h4>
-                        <p>Instructor</p>
-                    </div>
-                </div>
-                <div class="faculty-card">
-                    <div class="headshot">
-                        <img src="{% static 'knowescape/images/faculty/Ronnie.jpg' %}" alt="knowescape logo without text" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h4>Ronnie Cheng</h4>
-                        <p>Instructor</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="contact-img">
-            <!-- <img src="{% static 'knowescape/images/contact-img.jpeg' %}" alt="students walking through a corridor outside, books in-hand"> -->
-        </div>
-        <div class="container-fluid contact-container">
-            <div class="contact-header">
-                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-                <h2 class="site-header">Take the first step</h2>
-                <p class="site-p">
-                    How can we help <span>transform your business?</span>
-                </p>
-            </div>
-            <form action="{% url 'contact' %}" method="POST">
-                {% csrf_token %}
-                <div class="form-block">
-                    <label for="id_first_name">First Name:</label>
-                    <input type="text" name="first_name" required id="id_first_name">
-                </div>
-                
-                <div class="form-block">
-                    <label for="id_last_name">Last Name:</label>
-                    <input type="text" name="last_name" required id="id_last_name">
-                </div>
-                
-                <div class="form-block">
-                    <label for="id_email">Email:</label>
-                    <input type="email" name="email" maxlength="320" required id="id_email">
-                </div>
-                
-                <div class="form-block">
-                    <label for="id_company">Company:</label>
-                    <input type="text" name="company" id="id_company">
-                </div>
-                
-                <div class="form-block contact-block">
-                    <label for="id_message">Message:</label>
-                    <textarea name="message" rows="10" required id="id_message"></textarea>
-                </div>
-                <div class="form-block submit-block">
-                    <button class="site-btn" type="submit">Send</button>                         
-                </div>
-            </form>
-        </div>         
-    </section>
-    {% include 'knowescape/footer.html' %}
-    <!-- 
-    <section id="accreditations">
-        <div class="container-fluid accreditations-container">
-            <article class="accreditation">
-                <i class="fa-solid fa-star"></i>
-                <h2>QCTO Accredited</h2>
-                <p>
-                    This accreditation means we are equipped with
-                    all the necessary tools and resources to take
-                    your business to the next level!
-                </p>
-            </article>
-            <article class="accreditation">
-                <i class="fa-solid fa-star"></i>
-                <h2>QCTO Accredited</h2>
-                <p>
-                    This accreditation means we are equipped with
-                    all the necessary tools and resources to take
-                    your business to the next level!
-                </p>
-            </article>
-            <article class="accreditation">
-                <i class="fa-solid fa-star"></i>
-                <h2>QCTO Accredited</h2>
-                <p>
-                    This accreditation means we are equipped with
-                    all the necessary tools and resources to take
-                    your business to the next level!
-                </p>
-            </article>
-        </div>
-    </section>
-    <div class="divider">
-        <div class="divider-header">
-            <img src="{% static 'knowescape/brand/logo_transparent.png' %}">
-        </div>
-        <p class="divider-text">
-            Education is the most powerful tool which you can use to change the world.<br>
-            <span><b>~ Nelson Mandela</b></span>
-        </p>
     </div>
-    <section id="founder">
-        <div class="container-fluid founder-container">
-            <div class="founder-img">
-                <img src="{% static 'knowescape/images/founder-img.jpg' %}" alt="">
+</header>
+
+<section id="cta-extension">
+    <div class="cta-text site-p">
+        <p>
+            Knowescape Consulting is dedicated to empowering individuals and organizations through 
+            comprehensive consultancy and training services.
+            <br><br>Based in Kempton Park, 
+            Gauteng, we specialize in Skills Development, Enterprise and Supplier 
+            Development, and Start-Up Support, with a focus on fostering growth and
+            sustainability in our local communities.
+        </p>
+        <a href="#services" class="site-btn">Develop my Business</a>
+    </div>
+    <div class="cta-images">
+        <div class="grid-img first">
+            <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
+        </div>
+        <div class="grid-img second">
+            <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
+        </div>
+        <div class="grid-img third">
+            <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section id="cta">
+    <div class="cta-container">
+        <h2 class="site-header">
+            Here at <span>Knowescape Consulting,</span><br>
+            We help hundreds of business owners
+            transform their communities - <span>Big</span> and <span>Small</span>
+        </h2>
+        <a href="#services" class="site-btn">Join Us</a>
+    </div>
+</section>
+
+<section id="value">
+    <div class="container-fluid value-container">
+        <div class="value-header">
+            <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">
+                Why Businesses<br>
+                <span>Choose Us</span>
+            </h2>
+            <p class="site-p">
+                Empowering individuals and organizations through 
+                comprehensive consultancy and training services, 
+                to foster growth and sustainability in our local communities.
+            </p>
+        </div>
+        <div class="value-row">
+            <div class="value-card">
+                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+                <h5 class="site-header">Masterful Faculty</h5>
+                <p>
+                    Our faculty comprises industry veterans with decades of 
+                    hands-on experience, dedicated to imparting insightful knowledge. Elevate your learning with mentors 
+                    who set the standard for excellence.
+                </p>
             </div>
-            <div class="founder-content">
-                <div class="founder-text">
-                    <div>
-                        <h2 class="founder-heading">Our Founder</h2>
-                        <p>
-                            Norman is a qualified Training and Development Manager and Enterprise and Supplier 
-                            Development specialist with over 20 years' experience in Training, Enterprise Development 
-                            and Mentoring. He is passionate about training and development and is committed to excellence 
-                            in customer service. It is this drive that led to the formation of Knowescape Consulting. He 
-                            is also overseeing the overall quality assurance across all our offerings. 
-                            Norman has worked with SMMEs conducting training, coaching and mentoring for various organisations. 
-                            He has managed and overseen Skills and ESD projects on behalf of multinational clients over the years. 
-                            He holds a bachelor's degree in business administration, majoring in Entrepreneurship and Innovation.
-                        </p>
-                    </div>
-                    <div>
-                        <h2 class="vision-heading">His Vision</h2>
-                        <p>
-                            Norman strives to ensure that only people considered experts in their respective fields form part of the 
-                            Knowescape Consulting team.  In this way, you can rest secure in the knowledge your organisation and your 
-                            beneficiaries are receiving the best service delivered in the most professional, understandable manner possible.
-                        </p>
-                    </div>
-                </div>
+            <div class="value-card">
+                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+                <h5 class="site-header">Client-First Approach</h5>
+                <p>
+                    Your success is our priority. From start to finish -- we listen, 
+                    adapt, and support you every step of the way, ensuring 
+                    a seamless and personalized experience.
+                </p>
+            </div>
+            <div class="value-card">
+                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+                <h5 class="site-header">Proven Results</h5>
+                <p>
+                    Don't just take our word for it—our track record speaks for 
+                    itself. Join countless satisfied clients who've seen real 
+                    impact and growth with our services.
+                </p>
+            </div>
+            <div class="value-card">
+                <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+                <h5 class="site-header">Unmatched Expertise</h5>
+                <p>
+                    With years of experience and a passion for innovation, 
+                    our team delivers solutions tailored to your needs. 
+                    We don't just meet expectations — we exceed them, every time.
+                </p>
             </div>
         </div>
-    </section> 
-    We’re here to help!
+    </div>
+</section>
 
-We’ll answer any questions you may have, and help you get started with
-TRANSFORMING YOUR BUSINESS!-->
-    {% if messages %}
-    <ul class="messages animate__animated animate__slideInUp">
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+<section id="services">
+    <div class="container-fluid services-container">
+        <div class="services-header">
+            <h2 class="site-header">Our services<br><span>at a glance...</span></h2>
+            <p class="site-p">
+                We offer a range of services to equip you with all the fundamental skills 
+                to transform your business, empowering you to navigate challenges, 
+                seize opportunities, and achieve sustainable growth with confidence.
+            </p>
+        </div>
+        <div class="service-row">
+            <div class="service-card">
+                <div class="img">
+                    <img src="{% static 'knowescape/images/services-esdev.jpeg' %}" alt="">
+                </div>
+                <div class="details">
+                    <h3 class="site-header">Enterprise & Supplier Development</h3>
+                    <p class="site-p">
+                        With years of experience and a passion for innovation, 
+                        our team delivers solutions tailored to your needs.
+                    </p>
+                    <div class="actions">
+                        <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'es-dev' %}" class="site-btn more">Learn More</a>
+                    </div>
+                </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                <!-- JSON-LD for rich results -->
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "name": "Enterprise & Supplier Development",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Knowescape Consulting",
+                    "url": "https://knowescape.co.za"
+                  },
+                  "description": "With years of experience and a passion for innovation, our team delivers solutions tailored to your needs.",
+                  "url": "https://knowescape.co.za/es-dev"
+                }
+                </script>
+            </div>
 
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+            <div class="service-card">
+                <div class="img">
+                    <img src="{% static 'knowescape/images/services-skills.jpg' %}" alt="">
+                </div>
+                <div class="details">
+                    <h3 class="site-header">Skills Development</h3>
+                    <p class="site-p">
+                        Equipping you with all the right skills to 
+                        build or develop your thriving brand or business beyond expectation.
+                    </p>
+                    <div class="actions">
+                        <a href="{% url 'learner-signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'skills-dev' %}" class="site-btn more">Learn More</a>
+                    </div>
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
+                <!-- JSON-LD for rich results -->
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "name": "Skills Development",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Knowescape Consulting",
+                    "url": "https://knowescape.co.za"
+                  },
+                  "description": "Equipping you with all the right skills to build or develop your thriving brand or business beyond expectation.",
+                  "url": "https://knowescape.co.za/skills-dev"
+                }
+                </script>
+            </div>
 
-        // Select the element with the .has-menu class
-        const menuElement = document.querySelector('.has-menu');
+            <div class="service-card">
+                <div class="img">
+                    <img src="{% static 'knowescape/images/services-startup.jpeg' %}" alt="">
+                </div>
+                <div class="details">
+                    <h3 class="site-header">Startup Support</h3>
+                    <p class="site-p">
+                        Guidance and support from industry veterans to help 
+                        navigate the uncertainty of the modern-day market.
+                    </p>
+                    <div class="actions">
+                        <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'start-up' %}" class="site-btn more">Learn More</a>
+                    </div>
+                </div>
 
-        // Add the click event listener to toggle the .no-display class when the menu element is clicked
-        menuElement.addEventListener('click', function(event) {
-            var subNav = document.querySelector('.modal-content .sub-nav-list');
+                <!-- JSON-LD for rich results -->
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "name": "Startup Support",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Knowescape Consulting",
+                    "url": "https://knowescape.co.za"
+                  },
+                  "description": "Guidance and support from industry veterans to help navigate the uncertainty of the modern-day market.",
+                  "url": "https://knowescape.co.za/start-up"
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+    <img class="services-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
+</section>
 
-            // Toggle the .no-display class
-            subNav.classList.toggle('no-display');
 
-            // If the .no-display class is removed (meaning the element is displayed), listen for clicks outside the targetElement
-            if (!subNav.classList.contains('no-display')) {
-                document.addEventListener('click', outsideClickListener);
-            }
-        });
+<section id="faculty">
+    <div class="container-fluid faculty-container">
+        <header>
+            <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">
+                Our <span>Faculty</span>
+            </h2>
+            <p>
+                Meet the team of industry-renowned subject experts,
+                responsible for turning your business into a success story.
+            </p>
+        </header>
+        <div class="faculty-cards">
+            <!-- Repeat for each faculty member -->
+            <div class="faculty-card">
+                <div class="headshot">
+                    <img src="{% static 'knowescape/images/faculty/norman.jpg' %}" alt="Norman Manganyi headshot" loading="lazy">
+                </div>
+                <div class="card-text">
+                    <h4>Norman Manganyi</h4>
+                    <p>Founder, CEO</p>
+                </div>
+            </div>
+            <!-- Add the rest of the faculty similarly -->
+        </div>
+    </div>
+</section>
 
-        // Function to check for clicks outside the target element
-        function outsideClickListener(event) {
-            const subNav = document.querySelector('.modal-content .sub-nav-list');
-            
-            // Check if the click happened outside the targetElement and the menuElement
-            if (!subNav.contains(event.target) && !menuElement.contains(event.target)) {
-                // Add the .no-display class back
-                subNav.classList.add('no-display');
-                
-                // Remove this event listener after the .no-display class is added
-                document.removeEventListener('click', outsideClickListener);
-            }
-        }
+<section id="contact">
+    <div class="contact-img"></div>
+    <div class="container-fluid contact-container">
+        <div class="contact-header">
+            <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+            <h2 class="site-header">Take the first step</h2>
+            <p class="site-p">
+                How can we help <span>transform your business?</span>
+            </p>
+        </div>
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-block">
+                <label for="id_first_name">First Name:</label>
+                <input type="text" name="first_name" required id="id_first_name">
+            </div>
+            <div class="form-block">
+                <label for="id_last_name">Last Name:</label>
+                <input type="text" name="last_name" required id="id_last_name">
+            </div>
+            <div class="form-block">
+                <label for="id_email">Email:</label>
+                <input type="email" name="email" maxlength="320" required id="id_email">
+            </div>
+            <div class="form-block">
+                <label for="id_company">Company:</label>
+                <input type="text" name="company" id="id_company">
+            </div>
+            <div class="form-block contact-block">
+                <label for="id_message">Message:</label>
+                <textarea name="message" rows="10" required id="id_message"></textarea>
+            </div>
+            <div class="form-block submit-block">
+                <button class="site-btn" type="submit">Send</button>                         
+            </div>
+        </form>
+    </div>
+</section>
 
-        // Select the element with the .has-menu class
-        const enrollElement = document.querySelector('.action-link');
+{% if messages %}
+<ul class="messages animate__animated animate__slideInUp">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 
-        // Add the click event listener to toggle the .no-display class when the menu element is clicked
-        enrollElement.addEventListener('click', function(event) {
-            var enrollSubNav = document.querySelector('.modal-footer .sub-nav-list');
-
-            // Toggle the .no-display class
-            enrollSubNav.classList.toggle('no-display');
-
-            // If the .no-display class is removed (meaning the element is displayed), listen for clicks outside the targetElement
-            if (!enrollSubNav.classList.contains('no-display')) {
-                document.addEventListener('click', outsideClickListener);
-            }
-        });
-
-        // Function to check for clicks outside the target element
-        function outsideClickListener(event) {
-            const enrollSubNav = document.querySelector('.modal-footer .sub-nav-list');
-            
-            // Check if the click happened outside the targetElement and the menuElement
-            if (!enrollSubNav.contains(event.target) && !enrollElement.contains(event.target)) {
-                // Add the .no-display class back
-                enrollSubNav.classList.add('no-display');
-                
-                // Remove this event listener after the .no-display class is added
-                document.removeEventListener('click', outsideClickListener);
-            }
-        }
-    </script>
-
-    <!-- Lenis -->
-    <script>
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-        console.log(e)
-        })
-
-        lenis.on('scroll', ScrollTrigger.update)
-
-        gsap.ticker.add((time)=>{
-        lenis.raf(time * 1000)
-        })
-
-        gsap.ticker.lagSmoothing(0)
-    </script>
-
-</body>
-</html>
+{% endblock %}

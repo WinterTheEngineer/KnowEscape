@@ -1,200 +1,113 @@
+{% extends 'knowescape/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <meta name="Knowescape Consulting"/>
-    <meta name="theme-color" content="#14201B">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Skills Development | Knowescape Consulting{% endblock %}
+{% block description %}We equip individuals and businesses with the skills to grow and succeed.{% endblock %}
 
-
-    <meta name="author" content="Knowescape">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="english">
-    <meta name="description" content="Empowerment through Skills Development, Enterprise and Supplier Development, and Start-Up Support">
-
-    <meta property="og:title" content="Skills and Business Development">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://knowescape.com">
-    <meta property="og:image" content="{% static 'knowescape/images/website-box-bg.jpg' %}">
-    <meta property="og:description" content="empowering individuals and organizations through comprehensive consultancy and training services.">
-    <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="Knowescape">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-    <!-- CDNs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- imports -->
-    <link rel="icon" type="image/x-icon" href="{% static 'knowescape/brand/favicon.png' %}">
-
-    
+{% block page_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/services.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/fonts.css' %}">
+{% endblock page_styles %}
+
+{% block responsive_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/services-responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'knowescape/css/animations.css' %}">
+{% endblock responsive_styles %}
 
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Skills Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Knowescape Consulting",
+    "url": "https://knowescape.co.za"
+  },
+  "description": "We equip individuals and businesses with the skills to grow and succeed.",
+  "url": "https://knowescape.co.za/skills-dev"
+}
+</script>
+{% endblock %}
 
-    <title>{{page_title}} - KnowEscape</title>
-</head>
-<body>
-    <div class="overlay"></div>
-    <header id="header">
-        {% include 'knowescape/nav.html' %}
-        <div class="header-container">
-            <div class="header-text">
-                <h1 class="site-header"> 
-                    Skills <span>Development</span>
-                </h1>
-                <p class="site-p">      
-                    tailored training programs
-                    designed to enhance the skills and
-                    experience of individuals and teams
-                    across various industries.
-                </p>
-                <a href="#services" class="site-btn apply">Develop my Business</a>
-            </div>
-            <div class="header-images">
-                <div class="grid-img first">
-                    <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
-                </div>
-                <div class="grid-img second">
-                    <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
-                </div>
-                <div class="grid-img third">
-                    <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </header>
-    <section id="cta-extension">
-        <div class="cta-text site-p">
-            <h2 class="site-header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quos, quisquam. Accusantium optio voluptas asperiores.
-            </h2>
-            <a href="#services" class="site-btn">Develop my Business</a>
-        </div>
-    </section>
-    <section id="startup">
-        <div class="startup-text">
-            <h2 class="site-header">What is<br><span>Skills Development</span></h2>
+{% block content %}
+<div class="overlay"></div>
+<header id="header">
+    {% include 'knowescape/nav.html' %}
+    <div class="header-container">
+        <div class="header-text">
+            <h1 class="site-header">
+                Skills <span>Development</span>
+            </h1>
             <p class="site-p">
-                <span>
-                    Tailored training programs
-                    designed to enhance the skills and
-                    experience of individuals and teams
-                    across various industries.
-                </span>
-                <br><br>
-                Our courses range
-                from technical skills to leadership,
-                management development as well as
-                learnerships, ensuring that participants are
-                well-prepared to meet the demands of the
-                modern workplace.
+                Equipping individuals and businesses with the essential skills to thrive, innovate, and grow.
             </p>
-            <a href="#services" class="site-btn">Develop my Skills</a>
+            <a href="{% url 'learner-signup' %}" class="site-btn apply">Develop My Skills</a>
         </div>
-        <video autoplay muted loop>
-            <source src="{% static 'knowescape/images/vid/start-up-header.webm' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-    <section id="key-offerings">
-        <div class="offerings-header">
-            <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
-            <h2 class="site-header">Key Offerings</h2>
-        </div>
-        <div class="accordion" id="key-points">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Technical Skills Training
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Customized training modules in industry-specific technical skills that align with current market needs.
-                    </div>
-                </div>
+        <div class="header-images">
+            <div class="grid-img first">
+                <img src="{% static '/knowescape/images/cta/cta-1.webp' %}" alt="" loading="lazy">
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Leadership and Management Development
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Programs aimed at developing strong leadership skills, fostering effective management practices, and nurturing future leaders.
-                    </div>
-                </div>
+            <div class="grid-img second">
+                <img src="{% static '/knowescape/images/cta/cta-2.webp' %}" alt="" loading="lazy">
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Learnerships
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Offering structured learning programs that combine theoretical and practical training to develop skilled professionals ready to enter the workforce.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Continuous Professional Development (CPD)
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Opportunities for ongoing education to keep professionals up-to-date with the latest industry trends and practices.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Business Planning and Strategy Development:
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                    <div class="accordion-body">
-                        Assistance in creating a solid business plan that outlines clear goals, strategies, and action plans.
-                    </div>
-                </div>
+            <div class="grid-img third">
+                <img src="{% static '/knowescape/images/cta/cta-3.webp' %}" alt="" loading="lazy">
             </div>
         </div>
-    </section>
-    {% include 'knowescape/footer.html' %}
+    </div>
+</header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.querySelector('.video-bg');
-            if (video) {
-                video.muted = true; // ensure muted
-                video.playsInline = true;
-                video.setAttribute('webkit-playsinline', 'true');
-                video.play().catch(err => {
-                console.log("Autoplay blocked:", err);
-                });
-            }
-        });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<section id="cta-extension">
+    <div class="cta-text site-p">
+        <h2 class="site-header">
+            Transform your capabilities and unlock your full potential through focused skills development.
+        </h2>
+        <a href="{% url 'learner-signup' %}" class="site-btn">Start Learning</a>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+<section id="key-offerings">
+    <div class="offerings-header">
+        <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
+        <h2 class="site-header">Key Offerings</h2>
+    </div>
+    <div class="accordion" id="key-points">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Customized Training Programs
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Tailored learning experiences to address your unique business and personal development needs.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Professional Mentorship
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Guidance and support from experienced mentors to accelerate learning and career growth.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Practical Workshops
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Hands-on sessions and workshops to apply skills in real-world business scenarios.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
