@@ -97,24 +97,35 @@ WSGI_APPLICATION = 'projectknowescape.wsgi.application'
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 
-if DEBUG:
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# if DEBUG:
+#     DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# else:
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": os.getenv("dbname", "postgres"),
+#             "USER": os.getenv("user", "postgres"),
+#             "PASSWORD": os.getenv("password", ""),
+#             "HOST": os.getenv("host", "db.xyz.supabase.co"),  # Your Supabase host
+#             "PORT": os.getenv("port", "5432"),
+#         }
+#     }
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("dbname", "postgres"),
+        "USER": os.getenv("user", "postgres"),
+        "PASSWORD": os.getenv("password", ""),
+        "HOST": os.getenv("host", "db.xyz.supabase.co"),  # Your Supabase host
+        "PORT": os.getenv("port", "5432"),
     }
 }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": os.getenv("dbname", "postgres"),
-            "USER": os.getenv("user", "postgres"),
-            "PASSWORD": os.getenv("password", ""),
-            "HOST": os.getenv("host", "db.xyz.supabase.co"),  # Your Supabase host
-            "PORT": os.getenv("port", "5432"),
-        }
-    }
 
 
 # Password validation
