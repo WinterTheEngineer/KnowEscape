@@ -58,6 +58,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
+SITE_URL = 'knowescape.co.za'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
