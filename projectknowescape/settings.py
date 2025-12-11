@@ -39,6 +39,7 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  '.vercel.app'
 ]
 
+SITE_ID = 1
 
 # CSRF_TRUSTED_ORIGINS = ['https://www.knowescape.co.za']
 
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
