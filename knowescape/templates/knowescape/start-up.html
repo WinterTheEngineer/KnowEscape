@@ -24,7 +24,7 @@
     "url": "https://knowescape.co.za"
   },
   "description": "Guidance and support for startups to navigate the modern market successfully.",
-  "url": "https://knowescape.co.za/start-up"
+  "url": "https://knowescape.co.za/start-up-support/"
 }
 </script>
 {% endblock %}
@@ -41,7 +41,7 @@
             <p class="site-p">
                 Expert guidance and mentorship to help startups navigate uncertainty and grow sustainably.
             </p>
-            <a href="{% url 'company-signup' %}" class="site-btn apply">Launch My Startup</a>
+            <a href="{% url 'company_signup' %}" class="site-btn apply">Launch My Startup</a>
         </div>
         <div class="header-images">
             <div class="grid-img first">
@@ -62,7 +62,7 @@
         <h2 class="site-header">
             From concept to launch, we support every step of your startup journey.
         </h2>
-        <a href="{% url 'company-signup' %}" class="site-btn">Start My Startup</a>
+        <a href="{% url 'company_signup' %}" class="site-btn">Start My Startup</a>
     </div>
 </section>
 
@@ -97,17 +97,4 @@
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Mentorship & Coaching
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
-                <div class="accordion-body">
-                    Ongoing mentorship and guidance to navigate challenges and seize growth opportunities.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-{% endblock %}
+            <h2 class="accordion

@@ -1,13 +1,16 @@
 {% extends 'knowescape/base.html' %}
 {% load static %}
 
+
 {% block page_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/index.css' %}">
 {% endblock page_styles %}
 
+
 {% block responsive_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/responsive.css' %}">
 {% endblock responsive_styles %}
+
 
 {% block content %}
 <div class="overlay"></div>
@@ -26,7 +29,7 @@
                 <span>sustainability</span> in our local communities.
             </p>
             <div class="header-actions">
-                <a href="{% url 'company-signup' %}" class="site-btn apply">Apply</a>
+                <a href="{% url 'company_signup' %}" class="site-btn apply">Apply</a>
                 <a href="#cta" class="site-btn more">Learn More</a>
             </div>
         </div>
@@ -37,12 +40,13 @@
                 <div class="logo">
                     <img src="{% static 'knowescape/brand/logo_slim.png' %}" alt="knowescape logo without text" loading="lazy">
                 </div>
-                <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                   
+                <img class="header-img third inner"  src="{% static 'knowescape/images/header-storefront.webp' %}" loading="lazy">                    
                 <img class="header-img fourth outer"  src="{% static 'knowescape/images/header-mechanic.webp' %}" loading="lazy">
             </div>
         </div>
     </div>
 </header>
+
 
 <section id="cta-extension">
     <div class="cta-text site-p">
@@ -69,6 +73,7 @@
     </div>
 </section>
 
+
 <section id="cta">
     <div class="cta-container">
         <h2 class="site-header">
@@ -79,6 +84,7 @@
         <a href="#services" class="site-btn">Join Us</a>
     </div>
 </section>
+
 
 <section id="value">
     <div class="container-fluid value-container">
@@ -135,6 +141,7 @@
     </div>
 </section>
 
+
 <section id="services">
     <div class="container-fluid services-container">
         <div class="services-header">
@@ -157,8 +164,8 @@
                         our team delivers solutions tailored to your needs.
                     </p>
                     <div class="actions">
-                        <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
-                        <a href="{% url 'es-dev' %}" class="site-btn more">Learn More</a>
+                        <a href="{% url 'company_signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'esd' %}" class="site-btn more">Learn More</a>
                     </div>
                 </div>
 
@@ -174,7 +181,7 @@
                     "url": "https://knowescape.co.za"
                   },
                   "description": "With years of experience and a passion for innovation, our team delivers solutions tailored to your needs.",
-                  "url": "https://knowescape.co.za/es-dev"
+                  "url": "https://knowescape.co.za/enterprise-supplier-development/"
                 }
                 </script>
             </div>
@@ -190,8 +197,8 @@
                         build or develop your thriving brand or business beyond expectation.
                     </p>
                     <div class="actions">
-                        <a href="{% url 'learner-signup' %}" class="site-btn apply">Join Us</a>
-                        <a href="{% url 'skills-dev' %}" class="site-btn more">Learn More</a>
+                        <a href="{% url 'learner_signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'skills_development' %}" class="site-btn more">Learn More</a>
                     </div>
                 </div>
 
@@ -207,7 +214,7 @@
                     "url": "https://knowescape.co.za"
                   },
                   "description": "Equipping you with all the right skills to build or develop your thriving brand or business beyond expectation.",
-                  "url": "https://knowescape.co.za/skills-dev"
+                  "url": "https://knowescape.co.za/skills-development/"
                 }
                 </script>
             </div>
@@ -223,8 +230,8 @@
                         navigate the uncertainty of the modern-day market.
                     </p>
                     <div class="actions">
-                        <a href="{% url 'company-signup' %}" class="site-btn apply">Join Us</a>
-                        <a href="{% url 'start-up' %}" class="site-btn more">Learn More</a>
+                        <a href="{% url 'company_signup' %}" class="site-btn apply">Join Us</a>
+                        <a href="{% url 'startup_support' %}" class="site-btn more">Learn More</a>
                     </div>
                 </div>
 
@@ -240,7 +247,7 @@
                     "url": "https://knowescape.co.za"
                   },
                   "description": "Guidance and support from industry veterans to help navigate the uncertainty of the modern-day market.",
-                  "url": "https://knowescape.co.za/start-up"
+                  "url": "https://knowescape.co.za/start-up-support/"
                 }
                 </script>
             </div>
@@ -248,6 +255,7 @@
     </div>
     <img class="services-logo" src="{% static 'knowescape/brand/logo - glow.png' %}" alt="" loading="lazy">
 </section>
+
 
 
 <section id="faculty">
@@ -277,6 +285,7 @@
         </div>
     </div>
 </section>
+
 
 <section id="contact">
     <div class="contact-img"></div>
@@ -317,6 +326,7 @@
     </div>
 </section>
 
+
 {% if messages %}
 <ul class="messages animate__animated animate__slideInUp">
     {% for message in messages %}
@@ -324,5 +334,6 @@
     {% endfor %}
 </ul>
 {% endif %}
+
 
 {% endblock %}

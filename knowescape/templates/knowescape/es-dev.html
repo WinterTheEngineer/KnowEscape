@@ -24,7 +24,7 @@
         "url": "https://knowescape.co.za"
     },
     "description": "We empower businesses through enterprise and supplier development programs.",
-    "url": "https://knowescape.co.za/es-dev"
+    "url": "https://knowescape.co.za/enterprise-supplier-development/"
     }
 </script>
 {% endblock %}
@@ -38,12 +38,12 @@
                 <h1 class="site-header"> 
                     Enterprise and Supplier<br><span>Development</span>
                 </h1>
-                <p class="site-p">      
+                <p class="site-p">       
                     Supporting the growth of local
                     enterprises, ensuring they can compete
                     effectively in both local and global markets.
                 </p>
-                <a href="{% url 'company-signup' %}" class="site-btn apply">Develop my Business</a>
+                <a href="{% url 'company_signup' %}" class="site-btn apply">Develop my Business</a>
             </div>
             <div class="header-images">
                 <div class="grid-img first">
@@ -64,7 +64,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quos, quisquam. Accusantium optio voluptas asperiores.
             </h2>
-            <a href="{% url 'company-signup' %}" class="site-btn">Develop my Business</a>
+            <a href="{% url 'company_signup' %}" class="site-btn">Develop my Business</a>
         </div>
     </section>
     <section id="startup">
@@ -87,7 +87,7 @@
                 or preparing to launch, you get practical support, 
                 clear direction, and a partner who makes the whole process easier.
             </p>
-            <a href="{% url 'company-signup' %}" class="site-btn">Develop my Enterprise</a>
+            <a href="{% url 'company_signup' %}" class="site-btn">Develop my Enterprise</a>
         </div>
         <video autoplay muted loop>
             <source src="{% static 'knowescape/images/vid/start-up-header.webm' %}" type="video/mp4">

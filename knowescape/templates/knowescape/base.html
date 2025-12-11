@@ -11,13 +11,16 @@
 
     <meta name="author" content="Rhulani Kgosi Mogotsi">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{% block canonical %}https://knowescape.co.za{% endblock %}">
+    
+    <!-- Canonical: default to current path if request is available -->
+    <link rel="canonical" href="{% block canonical %}https://knowescape.co.za{{ request.path }}{% endblock %}">
+
 
     <!-- Open Graph -->
+    <meta property="og:url" content="{% block og_url %}https://knowescape.co.za{{ request.path }}{% endblock %}">
     <meta property="og:title" content="{% block og_title %}Knowescape Consulting | Skills, Enterprise & Supplier, Startup Support{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Empowering individuals and organizations through consultancy, training, and enterprise development.{% endblock %}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{% block og_url %}https://knowescape.co.za{% endblock %}">
     <meta property="og:image" content="{% block og_image %}{% static 'knowescape/images/website-box-bg.jpg' %}{% endblock %}">
     <meta property="og:locale" content="en_ZA">
     <meta property="og:site_name" content="Knowescape Consulting">
