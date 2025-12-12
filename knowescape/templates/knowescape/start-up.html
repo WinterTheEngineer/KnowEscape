@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}Startup Support | Knowescape Consulting{% endblock %}
-{% block description %}Guidance and support for startups to navigate the modern market successfully.{% endblock %}
+{% block description %}Startup Support from Knowescape Consulting helps new and early-stage businesses move from idea to launch with mentoring, business planning, and funding-readiness support.{% endblock %}
 
 {% block page_styles %}
     <link rel="stylesheet" href="{% static 'knowescape/css/services.css' %}">
@@ -23,7 +23,7 @@
     "name": "Knowescape Consulting",
     "url": "https://knowescape.co.za"
   },
-  "description": "Guidance and support for startups to navigate the modern market successfully.",
+  "description": "Startup Support from Knowescape Consulting helps new and early-stage businesses move from idea to launch with mentoring, business planning, and funding-readiness support.",
   "url": "https://knowescape.co.za/start-up-support/"
 }
 </script>
@@ -39,7 +39,7 @@
                 Startup <span>Support</span>
             </h1>
             <p class="site-p">
-                Expert guidance and mentorship to help startups navigate uncertainty and grow sustainably.
+                Startup Support from Knowescape Consulting helps founders move from idea to launch with practical mentoring, solid business planning, and B-BBEE-aligned funding readiness, so new ventures can grow sustainably from day one.
             </p>
             <a href="{% url 'company_signup' %}" class="site-btn apply">Launch My Startup</a>
         </div>
@@ -62,6 +62,9 @@
         <h2 class="site-header">
             From concept to launch, we support every step of your startup journey.
         </h2>
+        <p>
+            Whether you are validating an idea, preparing your first pitch, or getting ready to bring on your first customers, we help you build the structures, systems, and confidence you need to scale. Our team understands the realities of South African SMEs, including access-to-market and access-to-funding challenges.
+        </p>
         <a href="{% url 'company_signup' %}" class="site-btn">Start My Startup</a>
     </div>
 </section>
@@ -80,7 +83,7 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#key-points">
                 <div class="accordion-body">
-                    Help defining business models, market strategies, and operational plans for startups.
+                    Work one-on-one to clarify your business model, revenue streams, and go-to-market strategy. We help you turn a rough idea into a practical plan that investors, funders, and partners can understand and support.
                 </div>
             </div>
         </div>
@@ -92,9 +95,34 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#key-points">
                 <div class="accordion-body">
-                    Support in understanding target markets and validating business ideas before launch.
+                    Understand your target customers, competitors, and pricing so you can launch with confidence. We guide you through practical validation steps to test demand before you commit serious time and capital.
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Mentorship & Coaching
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Gain access to experienced mentors who have built and supported businesses across Gauteng. Regular sessions keep you accountable, help you navigate setbacks, and ensure that your next move is always intentional.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Funding & ESD Readiness
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#key-points">
+                <div class="accordion-body">
+                    Prepare your startup to qualify for corporate Enterprise & Supplier Development (ESD) opportunities and other funding channels. We help you organise your compliance, documentation, and pitch so B-BBEE-aligned corporates can confidently support your growth.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
