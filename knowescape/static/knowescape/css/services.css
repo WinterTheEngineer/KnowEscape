@@ -47,7 +47,8 @@ body {
     height: 100vh;
     position: fixed;
     pointer-events: none;
-    background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green));
+    /* background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green)); */
+    background-color: #272727;
 }
 
 .site-header {

@@ -40,7 +40,8 @@ nav {
 }
 
 #responsive-nav {
-    background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green));
+    background: #272727;
+    /* background: linear-gradient(to bottom, var(--dark-green) 60%, var(--light-green)); */
 }
 
 #responsive-nav .offcanvas-header {
@@ -83,5 +84,5 @@ nav {
     margin-left: 1rem;
     border-radius: .5rem;
     flex-direction: column;
-    background-color: #0f1814;
+    background-color: #3d3d3d;
 }
