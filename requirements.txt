@@ -2,7 +2,6 @@ asgiref==3.12.1
 Django==6.0.7
 django-phonenumber-field==8.5.0
 phonenumbers==9.0.35
-psycopg2==2.9.12
 psycopg2-binary
 python-dotenv==1.2.2
 sqlparse==0.5.5
