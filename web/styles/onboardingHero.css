@@ -1,0 +1,94 @@
+#onboardingHero {
+    gap: 2rem;
+    height: 60vh;
+    display: flex;
+    margin: 5rem auto;
+    max-width: 1500px;
+}
+
+.img-marquee {
+    width: 50%;
+    z-index: -1;
+    height: 100%;
+    opacity: .2;
+    display: flex;
+    position: relative;
+    pointer-events: none;
+    flex-direction: column;
+}
+
+.img-marquee .group {
+    flex: 1;
+}
+
+.marquee-image {
+    width: 20rem;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: .5rem;
+}
+
+.marquee-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#onboardingHero .text-content {
+    gap: 2rem;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#onboardingHero .text-content .badge {
+    color: #ffffff;
+    border: 1px solid var(--ke-orange);
+}
+
+#onboardingHero .text-content .site-heading {
+    width: 90%;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+#onboardingHero .text-content .site-heading span {
+    /* margin-left: 1rem; */
+    display: inline-flex;
+    color: var(--ke-orange);
+}
+
+#onboardingHero .text-content .site-body {
+    width: 75%;
+    opacity: .5 !important;
+    color: #ffffff;
+}
+
+#onboardingHero .from-background {
+    width: 10% !important;
+}
+
+@media screen and (max-width: 1440px) {
+    #onboardingHero {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        max-width: None;
+    }
+    
+    #onboardingHero .text-content .site-heading {
+        font-size: 2.5rem;
+    }
+    
+    #onboardingHero .text-content .site-body {
+        width: 80%;
+        font-size: .9rem;
+    }
+    
+    .img-marquee {
+        height: 70vh;
+    }
+}

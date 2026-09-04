@@ -1,0 +1,54 @@
+#accreditations {
+    margin: 10rem 0;
+}
+
+.accreditations-container {
+    gap: 2rem;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.accreditation-card-container {
+    flex: 1;
+}
+
+.accreditation-card {
+    position: relative;
+    background-color: #ffffff10;
+}
+
+.accreditation-card .card-header {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accreditation-card .card-header svg {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 1;
+    color: var(--ke-orange);
+}
+
+.accreditation-card .title,
+.accreditation-card {
+    color: #ffffff;
+    text-align: center;
+}
+
+.accreditation-card .title span {
+    display: block;
+    font-size: 4rem;
+    color: var(--ke-orange);
+}
+
+@media screen and (max-width: 1440px) {
+
+    .accreditations-container {
+        gap: 2rem;
+        padding: 2rem;
+        max-width: none;
+    }
+}
