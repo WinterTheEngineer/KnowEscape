@@ -1,6 +1,7 @@
 import '../styles/landing.css'
 import Image from 'next/image';
 import Link from 'next/link';
+import Hypermenu from '@/components/Hypermenu';
 import ContactSection from '@/components/ContactSection';
 import OnboardingHero from '@/components/OnboardingHero'
 
@@ -10,6 +11,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 
 import {ArrowUpRight} from "lucide-react"
 import BBBEESection from '@/components/BBBEE-Landing';
+import SkillsDevelopmentSection from '@/components/SkillsDevelopment-Section';
 
 export default function Landing() {
 	return (
@@ -70,6 +72,7 @@ export default function Landing() {
 			</header>
 			<Accreditations />
 			<OnboardingHero />
+			<SkillsDevelopmentSection />
 			<BBBEESection />
 			<ContactSection />
 		</>

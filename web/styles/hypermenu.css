@@ -1,0 +1,79 @@
+#hypermenu {
+    gap: 5rem;
+    height: 90vh;
+    display: flex;
+    /* border: 1px solid #fff; */
+}
+
+#hypermenu-sidebar {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hm-header-heading {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.hm-header-heading span {
+    color: var(--ke-orange);
+}
+
+.hm-header-description {
+    color: #ffffff50;
+    font-family: 'Geist';
+}
+
+#hypermenu-options {
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#hypermenu-options .hypermenu-option {
+    color: #ffffff50;
+    padding: 1rem;
+    border: 1px solid #ffffff10;
+    background-color: #ffffff10;
+    transition: .3s color ease,
+                .3s transform ease;
+}
+
+#hypermenu-options .hypermenu-option:hover {
+    cursor: pointer;
+    transform: translateX(.5rem);
+    color: var(--ke-orange);
+}
+
+.hypermenu-panel {
+    flex: 1;
+    display: flex;
+    padding: 2rem;
+    align-items: end;
+    position: relative;
+    background-color: #ffffff10;
+}
+
+.hypermenu-panel .hypermenu-backdrop {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.hypermenu-panel .content .site-heading {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hypermenu-panel .content .site-body {
+    color: #ffffff;
+    font-family: 'Geist';
+    margin-bottom: 2rem;
+}

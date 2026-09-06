@@ -1,0 +1,21 @@
+#skills-development-section {
+    height: 100vh;
+    margin: 5rem 0;
+}
+
+.skills-development-container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 5rem;
+    /* max-width: 1440px; */
+}
+
+.skills-development-header .site-heading {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.skills-development-header .site-heading span {
+    font-size: 3rem;
+    color: var(--ke-orange);
+}

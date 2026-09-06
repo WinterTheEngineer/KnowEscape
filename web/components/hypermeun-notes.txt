@@ -1,0 +1,2 @@
+1. replace '.site-heading' with '.hm-heading' across the board
+2. replace '.site-body' with '.hm-body' across the board
